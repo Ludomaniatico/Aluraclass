@@ -1,0 +1,27 @@
+<meta charset="utf-8">
+<h1>Calculo de Puntaje de Equipo</h1>
+
+<script>
+	function Saltarlinea() {
+		document.write("<br>");
+	}
+	function Imprimir(argument) {
+		document.write(argument);
+		Saltarlinea();
+	}
+	var Par_gan=parseInt(prompt("Ingrese la Cantidad de Partidos Ganados"));
+	var Par_emp=parseInt(prompt("Ingrese la Cantidad de Partidos Empatados"));
+	var Puntaje=Par_gan*3+Par_emp;
+	Imprimir("La cantidad de puntos obtenidos en la fecha es "+Puntaje);
+	if (Puntaje==28) {
+		Imprimir("El equipo esta igual al año pasado")
+	}
+	if (Puntaje<28) {
+		Imprimir("El equipo esta peor que el año pasado")
+	}
+	if (Puntaje>28) {
+		Imprimir("El equipo esta mejor que el año pasado")
+	}
+
+	//print("Hola mundo")
+</script>

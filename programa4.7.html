@@ -1,0 +1,64 @@
+<canvas width="600" height="400"> </canvas>
+
+<script>
+
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");    
+    pincel.fillStyle = "white";
+    pincel.fillRect(0,0,600,400); 
+
+    function dibujarCirculo(evento){
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;    
+        pincel.fillStyle = "blue";
+        pincel.beginPath();
+        pincel.arc(x,y,10,0,2*Math.PI);
+        pincel.fill();
+        console.log(x + "," + y);        
+    }
+
+    function dibujarCuadrilatero(evento){
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;    
+        pincel.fillStyle = "green";
+        pincel.fillRect(x,y,15,20);
+    }
+    var colorcircunferencia = "blue"
+    function disenharCircunferencia(x,y,radio,colorcircunferencia) {
+        pincel.fillStyle=colorcircunferencia;
+        pincel.beginPath();
+        pincel.arc(x,y,radio,0,2*Math.PI);
+        pincel.fill();
+    }
+    
+    function limpiarPantalla() {
+        pincel.clearRect(0,0,600,40);
+    }
+
+    var x=0;
+    var sentido="derecho"
+    function animacion() {
+       
+        if (x===0) {
+            sentido="derecho";
+        } else if (x===600) {
+            sentido="izquierdo";
+        }
+
+        if (sentido==="derecho") {
+            limpiarPantalla();
+            disenharCircunferencia(x,20,20,"blue");
+            x++;
+        } else if (sentido==="izquierdo"){
+            limpiarPantalla();
+            disenharCircunferencia(x,20,20,"red");
+            x--;
+        }
+        
+        
+    }
+
+    setInterval(animacion,0.1)
+//pantalla.onclick=animacion;
+
+</script> 

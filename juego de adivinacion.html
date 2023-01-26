@@ -1,0 +1,23 @@
+<meta charset="utf-8">
+<h1>Juego de Adivinación</h1>
+<p>Continuando con nuestro curso de lógica de programación, lo que vamos a hacer en esta oportunidad es un nuevo programa que es un juego de adivinación.</p>
+<script type="text/javascript">
+	function Saltarlinea() {
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+	}
+	function Imprimir(argumento) {
+		document.write(argumento);
+	}
+	var num_pensado=Math.round(Math.random()*10);
+	var num_adivinado=parseInt(prompt("Ingrese un numero del 0 al 9"));
+	if (num_adivinado===num_pensado) {
+		Imprimir("Haz acertado!!!!")
+		alert("Haz acertado!!!!")
+	} 
+	else {
+		Imprimir("El numero pensado es "+num_pensado)
+		alert("Perdiste!!!!")
+	}
+</script>

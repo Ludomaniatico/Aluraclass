@@ -1,0 +1,36 @@
+<meta charset="utf-8">
+<h1>Loteria</h1>
+<p>Adivina cual es el numero de loteria</p>
+
+<script>
+	
+	function Saltarlinea() {
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+	}
+	function Imprimir(argumento) {
+		document.write(argumento);
+	}
+	
+	function Sorteo(num) {
+		return Math.round(Math.random() * num)
+	}
+	
+	var num_adivinado=parseInt(prompt("Ingrese un numero"));
+	
+	var num_pensado=Sorteo(num_adivinado);
+	
+	if (num_adivinado === num_pensado) {
+		Imprimir("Haz acertado!!!!")
+		alert("Haz acertado!!!!")
+	} 
+	else if (num_adivinado > num_pensado) {
+		Imprimir("Por poco y aciertas, te pasaste por "+ (num_adivinado - num_pensado))
+		alert("Perdiste!!!! el numero fue "+ num_pensado)
+	}
+	else {
+		Imprimir("Por poco y aciertas, te falto "+ (num_pensado - num_adivinado))
+		alert("Perdiste!!!! el numero fue "+ num_pensado)
+	}
+</script>

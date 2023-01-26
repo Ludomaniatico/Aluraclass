@@ -1,0 +1,28 @@
+<meta charset="utf-8">
+<h1>Evaluacion de años</h1>
+
+<script>
+	
+	function Saltarlinea() {
+		document.write("<br>");
+		document.write("<br>");
+	}
+	function Imprimir(argumento) {
+		document.write(argumento);
+		Saltarlinea()
+	}
+	
+	var anhoinicio = parseInt(prompt("Ingrese el año inicial"));
+	var anhofin = parseInt(prompt("Ingrese el año final"));
+
+//while con proteccion de sobreprocesamiento - limite de 3000 iteracciones
+	while (anhoinicio<=anhofin && (anhofin - anhoinicio)<=3000) {
+		if (anhoinicio%2===0){
+		Imprimir("El año es par, siendo el año "+ anhoinicio);	
+		} else {
+			Imprimir("El año es inpar, siendo el año "+ anhoinicio);	
+		}
+		anhoinicio=anhoinicio+1;
+	}
+	alert("Fin del procesado de información")
+</script>

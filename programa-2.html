@@ -1,0 +1,31 @@
+<canvas height="800" width="1000"></canvas>
+
+<script type="text/javascript">
+	var pantalla = document.querySelector("canvas");
+	var pincel = pantalla.getContext("2d");
+
+	function cuadrado(ancho,alto,color,posix,posiy) {
+		
+		pincel.fillStyle = color
+		pincel.fillRect(posix,posiy,ancho,alto)
+		pincel.strokeStyle = "black"
+		pincel.strokeRect(posix,posiy,ancho,alto)
+	}
+	
+var x = 0;
+var maxx = 10
+var color = ["yellow","green","red","black","blue","gray","lightgreen","darkgreen","brown"];
+ 
+while (x<=maxx) {
+		var y = 0;
+ 	 	for (y=0 ; y < color.length; y++) {
+ 			cuadrado(50,50,color[y],(0+x)*50,(0+y)*50);
+ 	 	}
+ 	x++;
+ }
+	
+
+
+
+
+</script>

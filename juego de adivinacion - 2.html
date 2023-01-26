@@ -1,0 +1,38 @@
+<meta charset="utf-8">
+<h1>Juego de Adivinación</h1>
+<p>Este juego de adivinanzas, te permite elegir la cantidad de intentos que deseas realizar, como maximo 5 intentos. Asimismo, te permite ingresar los digitos mientra evalua el resultado, el juego termina cuando adivinas el numero aleatorio, sin importar si te faltan intentos</p>
+<script type="text/javascript">
+	function Saltarlinea() {
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+	}
+	function Imprimir(argumento) {
+		document.write(argumento);
+	}
+	
+
+	var num_pensado=Math.round(Math.random()*10);
+	var intentos = parseInt(prompt("cantidad de intentos que desea realizar - numero del 0 al 5"))
+	var contador = 1	
+	if (intentos>5) {
+		intentos=5;
+	}
+
+
+	for (intentos; intentos > 0 ; intentos=intentos-1) {
+		
+		var num_adivinado=parseInt(prompt("Ingrese un numero del 0 al 9"));
+		if (num_adivinado===num_pensado) {
+			Imprimir("Haz acertado!!!! en el inteno numero "+ contador);
+			alert("Haz acertado!!!! en el inteno numero "+ contador);
+			break;
+		} else {
+			contador++
+		}
+		
+	}
+	if (num_adivinado!==num_pensado) {
+	alert("Perdiste!!!! - El numero pensado es "+num_pensado)
+	}
+</script>

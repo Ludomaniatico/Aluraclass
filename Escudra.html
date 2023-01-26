@@ -1,0 +1,54 @@
+<meta charset="utf-8">
+
+<h1>Hola Mundo</h1>
+
+<! –– atributos mas usados html -->
+
+<canvas width="600" height="400"> </canvas>
+
+<script>
+	//document.write("<h2>Hola Mundo</h2>")
+
+	var pantalla = document.querySelector("canvas");
+	var pincel = pantalla.getContext("2d");
+
+//	pincel.fillStyle = "darkgreen";	//Colores - 1
+//	pincel.fillRect(125,50,350,300);	//medidas del rectangulo 200-400 son los puntos siguientes del punto de referencia inicial
+//	pincel.fillStyle = "black";	//Colores - 2
+//	pincel.fillRect(175,110,90,90);	//medidas del rectangulo
+//	pincel.fillStyle = "black";	//Colores - 3
+//	pincel.fillRect(335,110,90,90);	//medidas del rectangulo
+//	pincel.fillStyle = "black";	//Colores - 4
+//	pincel.fillRect(265,200,70,100);	//medidas del rectangulo
+//	pincel.fillStyle = "black";	//Colores - 5
+//	pincel.fillRect(225,240,40,110);	//medidas del rectangulo
+//	pincel.fillStyle = "black";	//Colores - 6
+//	pincel.fillRect(335,240,40,110);	//medidas del rectangulo
+
+
+	
+
+//	pincel.fillStyle = "green";	//Colores - propiedad
+//	pincel.beginPath()
+//	pincel.arc(300,200,100,0,2*3.1415)
+//	pincel.fill()
+	
+	pincel.fillStyle = "black";	//Colores - propiedad
+	pincel.beginPath();
+	pincel.moveTo(50,50);
+	pincel.lineTo(50,400);
+	pincel.lineTo(400,400);
+	pincel.fill();
+
+	pincel.fillStyle = "white";	//Colores - propiedad
+	pincel.beginPath();
+	pincel.moveTo(100,175);
+	pincel.lineTo(100,350);
+	pincel.lineTo(275,350);
+	pincel.fill();
+
+
+//	pincel.fillStyle = "brown";	//Colores - propiedad
+//	pincel.fillRect(250,300,100,100)
+
+</script>

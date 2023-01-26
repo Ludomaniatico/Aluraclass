@@ -1,0 +1,18 @@
+<meta charset="utf-8">
+
+<canvas width="600" height="400"> </canvas>
+
+<script>
+	var pantalla = document.querySelector("canvas");
+	var pincel = pantalla.getContext("2d");
+
+	pincel.fillStyle = "red"	//Colores
+	pincel.fillRect(0,0,200,400)	//medidas del rectangulo
+	pincel.fillStyle = "yellow"	//Colores
+	pincel.fillRect(200,0,400,400)	//medidas del rectangulo
+	pincel.fillStyle = "red"	//Colores
+	pincel.fillRect(400,0,600,400)	//medidas del rectangulo
+	pincel.fillStyle = "blue"	//Colores
+	pincel.fillRect(0,0,600,200)	//medidas del rectangulo
+
+</script>

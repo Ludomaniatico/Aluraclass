@@ -1,0 +1,37 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+	var pantalla=document.querySelector("canvas");
+	var pincel=pantalla.getContext("2d");
+	var radio = 50;
+	var color = "red";
+	var puntoinicaldeanimacion=0;
+	var anchopantalla = 600;
+
+	function fondopantalla() {
+		pincel.fillStyle="lightgrey";
+		pincel.fillRect(0,0,600,400);
+	}
+
+	function disenharcirculo(x,y) {
+		pincel.fillStyle=color;
+		pincel.beginPath();
+		pincel.arc(x,y,radio,0,2*Math.PI);
+		pincel.fill();
+	}
+
+	function limpiarpantalla() {
+		pincel.clearRect(0,0,600,400);
+		fondopantalla();
+	}
+	
+	function animacion() {
+		limpiarpantalla();
+		disenharcirculo(puntoinicaldeanimacion,radio*2);
+		puntoinicaldeanimacion=puntoinicaldeanimacion+(anchopantalla/100);
+	}
+
+	fondopantalla()
+	setInterval(animacion,50)
+
+</script>

@@ -1,0 +1,29 @@
+<meta charset="utf-8">
+<h1>PROMEDIO DE EDADES DE LA FAMILIA</h1>
+
+<script>
+	
+	function Saltarlinea() {
+		document.write("<br>");
+		document.write("<br>");
+	}
+	function Imprimir(argumento) {
+		document.write(argumento);
+		Saltarlinea()
+	}
+	
+	var numfamiliares=parseInt(prompt("Ingrese el numero de familiares"))
+	var inicial=1
+	var edadfamiliares = 0
+	for (inicial; inicial <= numfamiliares; inicial++) {
+		var	edadingreso=parseInt(prompt("Ingrese la edad de su familiar"))
+		Imprimir("El familiar numero " + inicial +" tiene "+ edadingreso)
+		edadfamiliares=edadingreso + edadfamiliares
+	}
+
+	document.write("<br><hr><br>")
+	Imprimir("La media de la edades de sus familiares es "+(edadfamiliares/numfamiliares).toFixed(2))
+
+
+	alert("Fin del procesado de información")
+</script>

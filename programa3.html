@@ -1,0 +1,39 @@
+<meta charset="utf-8">
+
+<h1>Hola Mundo</h1>
+
+<! –– atributos mas usados html -->
+
+<canvas width="600" height="400"> </canvas>
+
+<script>
+	//document.write("<h2>Hola Mundo</h2>")
+
+	var pantalla = document.querySelector("canvas");
+	var pincel = pantalla.getContext("2d");
+
+	pincel.fillStyle = "red";	//Colores
+	pincel.fillRect(0,0,200,400);	//medidas del rectangulo 200-400 son los puntos siguientes del punto de referencia inicial
+	pincel.fillStyle = "red";	//Colores
+	pincel.fillRect(400,0,200,400);	//medidas del rectangulo
+	pincel.fillStyle = "yellow";	//Colores
+	pincel.fillRect(200,0,200,400);	//medidas del rectangulo
+
+	
+
+	pincel.fillStyle = "green";	//Colores - propiedad
+	pincel.beginPath()
+	pincel.arc(300,200,100,0,2*3.1415)
+	pincel.fill()
+	
+	pincel.fillStyle = "blue";	//Colores - propiedad
+	pincel.beginPath();
+	pincel.moveTo(300,200);
+	pincel.lineTo(200,400);
+	pincel.lineTo(400,400);
+	pincel.fill();
+
+	pincel.fillStyle = "brown";	//Colores - propiedad
+	pincel.fillRect(250,300,100,100)
+
+</script>

@@ -1,0 +1,42 @@
+<meta charset="utf-8">
+<h1>Indice IMC</h1>
+<p>IMC, el índice de masa corporal, que es una ponderación entre la altura y el peso de la persona, y hay una tabla de referencia que dice si una persona está con sobrepeso o debajo del peso ideal.</p>
+<h2>Programa para Calcular IMC</h2>
+<script>
+	function imprimir(parametro) {
+		document.write(parametro)
+	}
+	function IMC(peso,altura,persona) {
+		imc = peso / ( altura * altura );
+		imprimir("El indice de masa corporal de " + persona + " es de "+ imc.toFixed(2) +"<br>");
+	}
+	//imprimir("Hola mundo")
+	IMC(85,1.69,"Javier");
+	IMC(66,1.56,"Ghisell");
+
+
+
+
+    function saltarLinea() {
+
+        document.write("<br>");
+    }
+
+    function mostrar(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    function a(numero1, numero2) {
+        return numero1 + numero2;
+    }
+
+    function b(numero1, numero2) {
+        return numero1 / numero2;
+    }
+
+    var resultado = a(10,20) + b(30,2);
+
+    mostrar("El resultado es "+resultado);
+
+</script>
