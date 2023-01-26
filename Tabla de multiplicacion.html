@@ -1,0 +1,48 @@
+<meta charset="utf-8">
+<h1>Tabla de multiplicación</h1>
+
+<script>
+	
+	function Saltarlinea() {
+		document.write("<br>");
+		document.write("<br>");
+	}
+	function Imprimir(argumento) {
+		document.write(argumento);
+		Saltarlinea()
+	}
+	
+	var tablainicio = parseInt(prompt("Ingrese el inicio de la tabla"));
+	var tablafin = parseInt(prompt("Ingrese el final de la tabla"));
+
+	Imprimir("<h2>Esta es la tabla de mutiplicacion que se realizo con el comando WHILE</h2>")
+// maximo 2000 iteracciones por seguridad de sobreprocesamiento	
+	while (tablainicio<=tablafin && (tablafin - tablainicio)<=2000) {
+
+		Imprimir("<h3>Esta es la tabla de mutiplicacion del "+tablainicio+"</h3>")
+		
+		for (var multiplicaciones=1;multiplicaciones<=12;multiplicaciones=multiplicaciones+1) {
+			
+			Imprimir(tablainicio + " x " + multiplicaciones + " = " + (tablainicio*multiplicaciones))
+			
+		}
+		
+		tablainicio=tablainicio+1
+	}
+
+	Imprimir("<h2>Esta es la tabla de mutiplicacion que se realizo con el comando FOR</h2>")
+
+	tablainicio=tablainicio - tablafin
+
+// maximo 2000 iteracciones por seguridad de sobreprocesamiento
+	for (tablainicio;tablainicio<=tablafin && (tablafin - tablainicio)<=2000;tablainicio=tablainicio+1) {
+		Imprimir("<h3>Esta es la tabla de mutiplicacion del "+tablainicio+"</h3>")
+		
+		for (var multiplicaciones=1;multiplicaciones<=12;multiplicaciones=multiplicaciones+1) {
+			Imprimir(tablainicio + " x " + multiplicaciones + " = " + (tablainicio*multiplicaciones))
+		}
+	}	
+
+
+	alert("Fin del procesado de información")
+</script>
